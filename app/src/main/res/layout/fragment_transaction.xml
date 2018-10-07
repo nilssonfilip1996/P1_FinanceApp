@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffc489"
+    tools:context=".UserActivityClasses.TransactionFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/transactionDatetv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                android:text="@string/date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/transactionDateetv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:inputType="text"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                android:focusableInTouchMode="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/transactionDatetv"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/linear1">
+            <TextView
+                android:id="@+id/transactionTitletv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                android:text="@string/title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/transactionTitleetv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:inputType="text"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/transactionTitletv"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/linear2">
+
+<!--            <TextView
+                android:id="@+id/transactionCategorytv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/category"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />-->
+
+            <Spinner
+                android:id="@+id/categorySpinner"
+                android:layout_height="match_parent"
+                android:prompt="@string/category"
+                android:layout_width="wrap_content"
+                android:entries="@array/incomeList"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+            </Spinner>
+            <Switch
+                android:id="@+id/typeOfTransactionSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Toggle income/expense"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                app:layout_constraintStart_toEndOf="@id/categorySpinner"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <!--app:layout_constraintEnd_toEndOf="parent"/>-->
+        </Switch>
+<!--            <EditText
+                android:id="@+id/transactionCategoryetv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/transactionTitletv"
+                app:layout_constraintTop_toTopOf="parent"/>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/linear3">
+
+            <TextView
+                android:id="@+id/transactionAmounttv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/amount"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/transactionAmountetv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/transactionAmounttv"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/linear4"
+            app:layout_constraintStart_toStartOf="parent">
+            <com.example.nilss.financeapp.CustomButton
+                android:id="@+id/coimmitBtn"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/button_shape"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                android:text="@string/commitBtnText" />
+
+            <com.example.nilss.financeapp.CustomButton
+                android:id="@+id/scanBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_shape"
+                android:enabled="false"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                android:text="@string/product_scan"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"/>
+
+    </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>

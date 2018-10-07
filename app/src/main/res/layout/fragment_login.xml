@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityClasses.LoginFragment">
+
+
+    <TextView
+        android:id="@+id/logInEmailtv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:text="@string/email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/logInEmailetv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:textAlignment="gravity"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/logInPasswordetv"
+        app:layout_constraintTop_toTopOf="@+id/logInEmailtv"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/logInPasswordtv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/password"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logInEmailtv" />
+
+    <EditText
+        android:id="@+id/logInPasswordetv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:textAlignment="gravity"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/logInPasswordtv"
+        app:layout_constraintTop_toTopOf="@id/logInPasswordtv"
+        android:inputType="textPassword"/>
+
+    <com.example.nilss.financeapp.CustomButton
+        android:id="@+id/logInBtn"
+        android:background="@drawable/button_shape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/logInBtnText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logInPasswordetv" />
+
+    <TextView
+        android:id="@+id/registertv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:text="@string/notAMemberText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logInBtn" />
+</android.support.constraint.ConstraintLayout>

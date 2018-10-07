@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/piggybank"
+    tools:context=".UserActivityClasses.UserActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragmentContainer2"
+        android:layout_margin="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteY="8dp">
+            <FrameLayout
+                android:id="@+id/fragmentTopContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/Layout0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/fragmentTopContainer"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteX="5dp">
+
+                <com.example.nilss.financeapp.CustomButton
+                    android:id="@+id/toggleBtn"
+                    android:background="@drawable/button_shape"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:text="@string/toggle_income_expenses"
+                    android:textStyle="bold" />
+
+                <com.example.nilss.financeapp.CustomButton
+                    android:id="@+id/addTransactionBtn"
+                    android:background="@drawable/button_shape"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:text="@string/add_transaction"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/fragmentRecyclerViewContainer"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_margin="5dp"
+                app:layout_constraintTop_toBottomOf="@id/Layout0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/Layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/fragmentRecyclerViewContainer"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteX="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search_from"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:fontFamily="casual"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/seachFrometv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:fontFamily="casual"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textColor="@android:color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/Layout1"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteX="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search_to"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:fontFamily="casual"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/seachtoetv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:fontFamily="casual"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textColor="@android:color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Layout2">
+                <com.example.nilss.financeapp.CustomButton
+                    android:id="@+id/searchBtn"
+                    android:background="@drawable/button_shape"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:fontFamily="casual"
+                    android:text="@string/search"
+                    android:textStyle="bold"/>
+                <com.example.nilss.financeapp.CustomButton
+                    android:id="@+id/clearBtn"
+                    android:background="@drawable/button_shape"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:fontFamily="casual"
+                    android:text="@string/clear_search_criteria"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

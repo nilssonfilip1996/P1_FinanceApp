@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffc489"
+    tools:context=".UserActivityClasses.UserActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragmentTopContainerLandscape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        app:layout_constraintTop_toBottomOf="@id/fragmentTopContainerLandscape"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/landScapeLinear1">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
